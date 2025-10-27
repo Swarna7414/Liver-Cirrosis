@@ -1,13 +1,15 @@
 import { FiGithub } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
 import { FaXTwitter } from "react-icons/fa6";
-import { TbBulb } from "react-icons/tb";
-import { FaHeartCircleCheck } from "react-icons/fa6";
-import { TbStarFilled } from "react-icons/tb";
+import { GiBrain } from "react-icons/gi";
+import { VscGraphLine } from "react-icons/vsc";
 import { Card, CardContent } from "@/components/ui/card";
 import Swarnaone from "../asserts/about/swarnaone.png"
 import TechinalLead from "../asserts/about/Leadimage.png"
 import harshith from "../asserts/about/Harshith.png";
+import { TbTargetArrow } from "react-icons/tb";
+import { IoIosSync } from "react-icons/io";
+import { BsGlobe2 } from "react-icons/bs";
 import { Button } from "@/components/ui/button";
 
 const About = () => {
@@ -59,7 +61,7 @@ const About = () => {
             Meet Our <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Team</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Passionate innovators dedicated to revolutionizing dental care through artificial intelligence and cutting-edge technology.
+            Passionate innovators dedicated to revolutionizing liver disease diagnosis through advanced deep learning and medical imaging technology.
           </p>
         </div>
       </div>
@@ -154,47 +156,85 @@ const About = () => {
 
       
       <div className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Our <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Mission</span></h2>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-            At DentiMap, we're committed to transforming dental healthcare through innovative AI technology. 
-            Our mission is to make advanced dental diagnostics accessible, accurate, and immediate for everyone. 
-            By combining cutting-edge machine learning with intuitive design, we're creating tools that empower 
-            both patients and dental professionals to achieve better oral health outcomes.
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8">Our <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Mission</span></h2>
+          <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+            Liver cirrhosis, the final stage of chronic liver disease, ranks as the 11th leading cause of death globally, contributing to 2.4% of deaths worldwide. 
+            Our mission is to transform liver disease diagnosis through advanced AI technology, making precise segmentation and early detection accessible to healthcare providers.
+          </p>
+          <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+            Leveraging the groundbreaking <span className="font-semibold text-foreground">nnSynergyNet3D architecture</span> developed at Northwestern University, 
+            our platform integrates continuous and discrete latent spaces to capture both fine-grained and coarse features in MRI scans. 
+            This synergistic approach enables accurate segmentation of cirrhotic livers, essential for monitoring disease progression, 
+            assessing severity, and evaluating treatment responses.
+          </p>
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            By combining cutting-edge deep learning with intuitive design, we're creating tools that empower medical professionals and researchers 
+            to achieve better outcomes in liver disease management. Our technology demonstrates superior cross-modal generalization, 
+            improving segmentation consistency across both CT and MRI modalities, ultimately easing clinical workflows.
           </p>
         </div>
       </div>
 
-      
-      <div className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-white"><TbBulb size={36}/></span>
+      {/* Technology & Research Section */}
+      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-gray-900 dark:to-gray-800">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-6xl font-bold mb-12 text-center">
+            Our <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Technology</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <Card className="border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br  rounded-xl flex items-center justify-center mr-4">
+                    <span className="text-black dark:text-white text-3xl font-bold"><GiBrain/></span>
+                  </div>
+                  <h3 className="text-2xl font-bold">nnSynergyNet3D Architecture</h3>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Our model leverages synergistic theory by integrating continuous and discrete latent spaces for 3D volumes. 
+                  This dual approach captures both fine-grained details and coarse features, enabling effective modeling of 
+                  intricate feature interactions in MRI scans.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 bg-transparent dark:bg-transparent backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br rounded-xl flex items-center justify-center mr-4">
+                    <span className="text-black dark:text-white text-3xl font-bold"><VscGraphLine/></span>
+                  </div>
+                  <h3 className="text-2xl font-bold">Proven Results</h3>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Validated on 628 high-resolution T1 abdominal MRI scans from 339 patients, our model outperforms 
+                  the baseline nnUNet3D by approximately 2%. Zero-shot testing on CT scans demonstrated superior 
+                  cross-modal generalization capabilities.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="bg-white/50 dark:bg-gray-800/50 rounded-2xl p-8 backdrop-blur-sm">
+            <h3 className="text-3xl font-bold mb-8 text-center">Key Features</h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="flex flex-col items-center justify-center text-center">
+                <div className="text-5xl mb-4 text-red-600"><TbTargetArrow/></div>
+                <h4 className="text-xl font-bold mb-3">High Accuracy</h4>
+                <p className="text-base text-muted-foreground">87.89% Dice Similarity Coefficient on T1W MRI scans</p>
               </div>
-              <h3 className="text-xl font-bold mb-4">Innovation First</h3>
-              <p className="text-muted-foreground">
-                We continuously push the boundaries of what's possible with AI technology in healthcare.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-white"><FaHeartCircleCheck/></span>
+              <div className="flex flex-col items-center justify-center text-center">
+                <div className="text-5xl mb-4 text-blue-500"><IoIosSync/></div>
+                <h4 className="text-xl font-bold mb-3">Auto-Configuration</h4>
+                <p className="text-base text-muted-foreground">Automatically adapts to dataset characteristics and hardware constraints</p>
               </div>
-              <h3 className="text-xl font-bold mb-4">Patient-Centered</h3>
-              <p className="text-muted-foreground">
-                Every decision we make is guided by improving patient outcomes and experiences.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-white"><TbStarFilled/></span>
+              <div className="flex flex-col items-center justify-center text-center">
+                <div className="text-5xl mb-4 text-green-500"><BsGlobe2/></div>
+                <h4 className="text-xl font-bold mb-3">Cross-Modal</h4>
+                <p className="text-base text-muted-foreground">Generalizes effectively across CT and MRI modalities</p>
               </div>
-              <h3 className="text-xl font-bold mb-4">Excellence</h3>
-              <p className="text-muted-foreground">
-                We strive for the highest standards in everything we build and deliver.
-              </p>
             </div>
           </div>
         </div>
