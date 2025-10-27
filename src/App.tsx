@@ -65,7 +65,7 @@ const AppContent = () => {
       
       {!isLoginPage(location.pathname) && (
         <div 
-          className="bottom-8 right-5 transform -translate-x-1/2 fixed hidden lg:block cursor-pointer transition-transform duration-300"
+          className="bottom-8 right-10 transform -translate-x-1/2 fixed hidden lg:block cursor-pointer transition-transform duration-300"
           onClick={openChat}
           title="Chat with DentiJha AI"
         >
