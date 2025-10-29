@@ -1,4 +1,3 @@
-// Production Configuration for DentiMap
 export const productionConfig = {
   // DeepInfra AI API Configuration
   DEEPINFRA_API_KEY: 'W9bRJ6CQ6xjTMDzRJ8WALYMEuna0Rua1',

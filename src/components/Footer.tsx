@@ -12,11 +12,11 @@ const Footer = () => {
             <Link to="/" className="flex items-center space-x-2 mb-4">
               <img 
                 src={Logo}
-                alt="DentiMap Logo" 
+                alt="Liver Logo" 
                 className="h-8 w-8"
               />
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-                DentiMap
+                Liver-Cirrosis
               </span>
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
@@ -69,7 +69,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center cursor-not-allowed">
             <p className="text-gray-400 text-sm">
-              © 2025 DentiMap. All rights reserved.
+              © 2025 Liver-Cirrosis. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0 cursor-help">
               <a className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
